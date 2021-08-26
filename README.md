@@ -13,9 +13,15 @@ git checkout -b <your name>
 git pull origin <branch name>
 ```
 
-### push changes
+### push changes to your branch
 ```
 git add .
 git commit -m "message"
-git push origin <branch name>
+git push origin <your branch name>
+```
+
+### push changes from your branch to master (make sure to pull current changes from master first and merge)
+```
+git pull origin master
+git push origin master
 ```
