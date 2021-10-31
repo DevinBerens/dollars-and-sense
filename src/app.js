@@ -1,6 +1,7 @@
 import React from 'react';
 import loadable from '@loadable/component';
 import { Route } from 'react-router-dom';
+import 'app.css';
 
 let Login = loadable(() => import('login/index'));
 let Portal = loadable(() => import('portal/index'));

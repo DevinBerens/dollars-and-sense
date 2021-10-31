@@ -1,5 +1,4 @@
 import React, { useCallback } from 'react';
-import CompanyLogo from 'companyLogo';
 
 let Login = (props) => {
   let enterPortal = useCallback(() => {
@@ -8,19 +7,7 @@ let Login = (props) => {
   }, []);
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flex: '1 1 auto',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        alignItems: 'center',
-        height: '100vh',
-        background: '#1f2833',
-        margin: '0',
-      }}
-    >
-      <CompanyLogo />
+    <div className="indexWrapper">
       <form style={{ display: 'flex', flexDirection: 'column' }}>
         <div
           style={{
@@ -31,6 +18,16 @@ let Login = (props) => {
             borderRadius: '3px',
           }}
         >
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              fontSize: '24px',
+              marginBottom: '15px',
+            }}
+          >
+            Dollars and Sense
+          </div>
           <label
             style={{
               display: 'flex',
