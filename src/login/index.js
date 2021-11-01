@@ -12,62 +12,82 @@ let Login = (props) => {
         <div
           style={{
             display: 'flex',
-            background: '#c5c6c7',
+            background: '#ffffff',
             flexDirection: 'column',
-            padding: '15px',
-            borderRadius: '3px',
+            padding: '30px',
+            borderRadius: '6px',
           }}
         >
           <div
             style={{
               display: 'flex',
               justifyContent: 'center',
-              fontSize: '24px',
-              marginBottom: '15px',
+              fontSize: '32px',
+              marginBottom: '30px',
+              color: '#1f2833',
             }}
           >
-            Dollars and Sense
+            Dollars & Sense
           </div>
-          <label
+          <div
             style={{
               display: 'flex',
-              justifyContent: 'space-between',
+              flexDirection: 'column',
+              marginBottom: '10px',
             }}
           >
-            Email:
             <input
               type="email"
               name="email"
-              placeholder="Enter email"
-              style={{ background: '#ffffff' }}
-            />
-          </label>
-          <label style={{ margin: '20px 0' }}>
-            Password:
-            <input
+              placeholder="Email"
+              autoFocus={true}
               style={{
-                marginLeft: '10px',
+                borderRadius: '3px',
                 background: '#ffffff',
+                marginBottom: '10px',
+                height: '25px',
+                border: '1px solid gray',
+                paddingLeft: '5px',
               }}
+            />
+            <input
               type="password"
               name="password"
-              placeholder="Enter password"
+              placeholder="Password"
+              style={{
+                borderRadius: '3px',
+                background: '#ffffff',
+                height: '25px',
+                border: '1px solid gray',
+                paddingLeft: '5px',
+              }}
             />
-          </label>
+          </div>
           <div
             style={{
               cursor: 'pointer',
               padding: '5px 10px',
-              border: '1px solid #000000',
-              color: '#1f2833',
+              color: '#ffffff',
               textDecoration: 'none',
               display: 'flex',
               justifyContent: 'center',
-              background: '#66fcf1',
+              background: '#45a29e',
+              borderRadius: '3px',
+              marginBottom: '10px',
             }}
             onClick={enterPortal}
           >
-            Login
+            Log In
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              color: 'gray',
+              fontFamily: 'Inter, sans-serif',
+            }}
+          >
+            Forgot my password
           </div>
         </div>
       </form>
