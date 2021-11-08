@@ -1,5 +1,5 @@
-import CompanyLogo from 'companyLogo';
 import React from 'react';
+import CompanyLogo from 'companyLogo';
 import { Link } from 'react-router-dom';
 
 let Portal = props => {
@@ -30,17 +30,77 @@ let Portal = props => {
           }}
         >
           <Link to="/financials/" style={boxStyle}>
-            Manage Revenue & Expenses
+            <div
+              style={{
+                display: 'flex',
+                flex: '1 1 auto',
+                margin: '0 25px',
+                justifyContent: 'center'
+              }}
+            >
+              Manage Revenue & Expenses
+            </div>
           </Link>
           <Link to="/inventory/" style={boxStyle}>
-            Manage Food Information
+            <div
+              style={{
+                display: 'flex',
+                flex: '1 1 auto',
+                margin: '0 25px',
+                justifyContent: 'center'
+              }}
+            >
+              Manage Inventory
+            </div>
           </Link>
           <Link to="/orders/" style={boxStyle}>
-            Customer Order Information
+            <div
+              style={{
+                display: 'flex',
+                flex: '1 1 auto',
+                margin: '0 25px',
+                justifyContent: 'center'
+              }}
+            >
+              Customer Order Information
+            </div>
           </Link>
-          <div style={boxStyle}>Button 4</div>
-          <div style={boxStyle}>Button 5</div>
-          <div style={boxStyle}>Button 6</div>
+          <Link to="/menu/" style={boxStyle}>
+            <div
+              style={{
+                display: 'flex',
+                flex: '1 1 auto',
+                margin: '0 25px',
+                justifyContent: 'center'
+              }}
+            >
+              Menu
+            </div>
+          </Link>
+          <Link to="/staff/" style={boxStyle}>
+            <div
+              style={{
+                display: 'flex',
+                flex: '1 1 auto',
+                margin: '0 25px',
+                justifyContent: 'center'
+              }}
+            >
+              Staff
+            </div>
+          </Link>
+          <Link to="/account/" style={boxStyle}>
+            <div
+              style={{
+                display: 'flex',
+                flex: '1 1 auto',
+                margin: '0 25px',
+                justifyContent: 'center'
+              }}
+            >
+              Account
+            </div>
+          </Link>
         </div>
       </div>
     </div>

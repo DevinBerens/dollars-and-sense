@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
 
-let Login = (props) => {
+let Login = props => {
   let enterPortal = useCallback(() => {
     //TODO: handle logic for user auth
     props.history.push('/portal/');
-  }, []);
+  }, [props.history]);
 
   return (
     <div className="indexWrapper">
@@ -15,7 +15,7 @@ let Login = (props) => {
             background: '#ffffff',
             flexDirection: 'column',
             padding: '30px',
-            borderRadius: '6px',
+            borderRadius: '6px'
           }}
         >
           <div
@@ -24,7 +24,7 @@ let Login = (props) => {
               justifyContent: 'center',
               fontSize: '32px',
               marginBottom: '30px',
-              color: '#1f2833',
+              color: '#1f2833'
             }}
           >
             Dollars & Sense
@@ -33,7 +33,7 @@ let Login = (props) => {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              marginBottom: '10px',
+              marginBottom: '10px'
             }}
           >
             <input
@@ -47,7 +47,7 @@ let Login = (props) => {
                 marginBottom: '10px',
                 height: '25px',
                 border: '1px solid gray',
-                paddingLeft: '5px',
+                paddingLeft: '5px'
               }}
             />
             <input
@@ -59,7 +59,7 @@ let Login = (props) => {
                 background: '#ffffff',
                 height: '25px',
                 border: '1px solid gray',
-                paddingLeft: '5px',
+                paddingLeft: '5px'
               }}
             />
           </div>
@@ -73,7 +73,7 @@ let Login = (props) => {
               justifyContent: 'center',
               background: '#45a29e',
               borderRadius: '3px',
-              marginBottom: '10px',
+              marginBottom: '10px'
             }}
             onClick={enterPortal}
           >
@@ -84,7 +84,7 @@ let Login = (props) => {
               display: 'flex',
               justifyContent: 'center',
               color: 'gray',
-              fontFamily: 'Inter, sans-serif',
+              fontFamily: 'Inter, sans-serif'
             }}
           >
             Forgot my password
