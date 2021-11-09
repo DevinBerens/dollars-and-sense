@@ -87,7 +87,7 @@ let Staff = (props) => {
           </div>
           {managers.map((m) => (
             <div
-              key={m}
+              key={m.email}
               style={{
                 display: 'flex',
                 marginBottom: '20px',
@@ -113,7 +113,7 @@ let Staff = (props) => {
           </div>
           {staff.map((s) => (
             <div
-              key={s}
+              key={s.email}
               style={{
                 display: 'flex',
                 marginBottom: '20px',
