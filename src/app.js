@@ -14,7 +14,6 @@ let Profit = loadable(() => import('financials/profit'));
 let Expenses = loadable(() => import('financials/expenses'));
 let Income = loadable(() => import('financials/income'));
 
-
 let App = props => {
   return (
     <div style={{ margin: '0' }}>
@@ -30,19 +29,19 @@ let App = props => {
       />
 
       <Route
-        path ={'/financials/profit'}
+        path={'/financials/profit'}
         exact={true}
         render={rProps => <Profit {...rProps} {...props} />}
       />
 
       <Route
-        path ={'/financials/expenses'}
+        path={'/financials/expenses'}
         exact={true}
         render={rProps => <Expenses {...rProps} {...props} />}
       />
 
       <Route
-        path ={'/financials/income'}
+        path={'/financials/income'}
         exact={true}
         render={rProps => <Income {...rProps} {...props} />}
       />
