@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import CompanyLogo from 'companyLogo';
 
 let dailyIncome = 0.00;
@@ -22,3 +22,29 @@ function profit(){
   document.write("Weekly profits are $" + weeklyProfit);
 
 };
+
+profit();*/
+
+/*let Financials = props => {
+  return (
+    <div className="indexWrapper">
+      <CompanyLogo />
+      <div style={{ color: '#ffffff' }}>Orders Index here</div>
+    </div>
+  );
+};
+export default Financials;*/
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const profit = () => {
+  return (
+    <>
+      <h1 style={{color: "red"}}>Hello Style!</h1>
+      <p>Add a little style!</p>
+    </>
+  );
+}
+
+export default profit;
