@@ -12,6 +12,8 @@ let Portal = loadable(() => import('portal/index'));
 let Staff = loadable(() => import('staff/index'));
 let Profit = loadable(() => import('financials/profit'));
 let Expenses = loadable(() => import('financials/expenses'));
+let Income = loadable(() => import('financials/income'));
+
 
 let App = props => {
   return (
@@ -37,6 +39,12 @@ let App = props => {
         path ={'/financials/expenses'}
         exact={true}
         render={rProps => <Expenses {...rProps} {...props} />}
+      />
+
+      <Route
+        path ={'/financials/income'}
+        exact={true}
+        render={rProps => <Income {...rProps} {...props} />}
       />
       <Route
         path={'/inventory/'}
