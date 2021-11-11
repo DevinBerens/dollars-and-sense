@@ -6,9 +6,7 @@ let Account = (props) => {
     <div className="indexWrapper">
       <CompanyLogo />
       <div style={{ color: '#ffffff' }}>
-        <div style={{ fontSize: '24px', display: 'flex' }}>
-          Applebees Account Page
-        </div>
+        <div style={{ fontSize: '24px', display: 'flex' }}>My Account</div>
       </div>
     </div>
   );
