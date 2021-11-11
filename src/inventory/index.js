@@ -5,17 +5,51 @@ let Inventory = (props) => {
   return (
     <div className="indexWrapper">
       <CompanyLogo />
-      <div style={{ color: "#ffffff" }}>Inventory Index here</div>
+      <div style={{ color: "#ffffff" }}>Manage Inventory</div>
+
       <div class="inventoryButtons">
         <button id="add" class="btnAdd">
-          Add
+          <div
+            style={{
+              //display: "flex",
+              //flex: "1 1 auto",
+              // margin: "75 75px",
+              marginRight: "25px",
+              marginLeft: "25px",
+              justifyContent: "center",
+            }}
+          >
+            Add
+          </div>
         </button>
 
         <button id="Remove" class="btnRemove">
-          Remove
+          <div
+            style={{
+              //display: "flex",
+              //flex: "1 1 auto",
+              // margin: "75 75px",
+              marginRight: "25px",
+              marginLeft: "25px",
+              justifyContent: "center",
+            }}
+          >
+            Remove
+          </div>
         </button>
         <button id="Current Inventory" class="btnCurrentInventory">
-          Current Inventory
+          <div
+            style={{
+              //display: "flex",
+              //flex: "1 1 auto",
+              // margin: "75 75px",
+              marginRight: "25px",
+              marginLeft: "25px",
+              justifyContent: "center",
+            }}
+          >
+            Current Inventory
+          </div>
         </button>
       </div>
     </div>
