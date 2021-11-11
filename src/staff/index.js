@@ -73,7 +73,7 @@ let Staff = (props) => {
               marginBottom: '40px',
             }}
           >
-            Applebee's Staff
+            Our Staff
           </div>
           <div
             style={{

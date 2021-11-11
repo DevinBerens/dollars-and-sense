@@ -10,6 +10,11 @@ let Menu = loadable(() => import('menu/index'));
 let Orders = loadable(() => import('orders/index'));
 let Portal = loadable(() => import('portal/index'));
 let Staff = loadable(() => import('staff/index'));
+let Profit = loadable(() => import('financials/profit'));
+let Expenses = loadable(() => import('financials/expenses'));
+let Income = loadable(() => import('financials/income'));
+let Quarterly = loadable(() => import('financials/quarterly'));
+let Yearly = loadable(() => import('financials/yearly'));
 
 let App = props => {
   return (
@@ -23,6 +28,36 @@ let App = props => {
         path={'/financials/'}
         exact={true}
         render={rProps => <Financials {...rProps} {...props} />}
+      />
+
+      <Route
+        path={'/financials/profit'}
+        exact={true}
+        render={rProps => <Profit {...rProps} {...props} />}
+      />
+
+      <Route
+        path={'/financials/expenses'}
+        exact={true}
+        render={rProps => <Expenses {...rProps} {...props} />}
+      />
+
+      <Route
+        path={'/financials/income'}
+        exact={true}
+        render={rProps => <Income {...rProps} {...props} />}
+      />
+
+      <Route
+        path={'/financials/quarterly'}
+        exact={true}
+        render={rProps => <Quarterly {...rProps} {...props} />}
+      />
+
+      <Route
+        path={'/financials/yearly'}
+        exact={true}
+        render={rProps => <Yearly {...rProps} {...props} />}
       />
       <Route
         path={'/inventory/'}
