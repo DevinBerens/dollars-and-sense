@@ -1,10 +1,27 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useRef } from 'react';
+import { collection, getDocs } from 'firebase/firestore/lite';
 
 let Login = props => {
-  let enterPortal = useCallback(() => {
-    //TODO: handle logic for user auth
-    props.history.push('/portal/');
-  }, [props.history]);
+  let { db } = props;
+  let emailRef = useRef();
+  let passwordRef = useRef();
+
+  let enterPortal = useCallback(async () => {
+    let users = collection(db, 'users');
+    let ul = await getDocs(users);
+    let userList = ul.docs.map(doc => doc.data());
+    let user;
+    userList.map(u => {
+      if (u.email === emailRef.current && u.password === passwordRef.current) {
+        user = u;
+        props.history.push('/portal/');
+        return;
+      }
+    });
+    if (!user) {
+      alert('Email / Password combination is incorrect');
+    }
+  }, [props.history, db]);
 
   return (
     <div className="indexWrapper">
@@ -38,6 +55,9 @@ let Login = props => {
           >
             <input
               type="email"
+              onChange={e => {
+                emailRef.current = e.target.value;
+              }}
               name="email"
               placeholder="Email"
               autoFocus={true}
@@ -52,6 +72,9 @@ let Login = props => {
             />
             <input
               type="password"
+              onChange={e => {
+                passwordRef.current = e.target.value;
+              }}
               name="password"
               placeholder="Password"
               style={{
