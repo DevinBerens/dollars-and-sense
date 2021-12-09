@@ -1,7 +1,7 @@
 import React, { useCallback, useRef } from 'react';
 import { collection, getDocs } from 'firebase/firestore/lite';
 
-let Login = props => {
+let Login = (props) => {
   let { db } = props;
   let emailRef = useRef();
   let passwordRef = useRef();
@@ -9,9 +9,9 @@ let Login = props => {
   let enterPortal = useCallback(async () => {
     let users = collection(db, 'users');
     let ul = await getDocs(users);
-    let userList = ul.docs.map(doc => doc.data());
+    let userList = ul.docs.map((doc) => doc.data());
     let user;
-    userList.map(u => {
+    userList.map((u) => {
       if (u.email === emailRef.current && u.password === passwordRef.current) {
         user = u;
         props.history.push('/portal/');
@@ -32,7 +32,7 @@ let Login = props => {
             background: '#ffffff',
             flexDirection: 'column',
             padding: '30px',
-            borderRadius: '6px'
+            borderRadius: '6px',
           }}
         >
           <div
@@ -41,7 +41,7 @@ let Login = props => {
               justifyContent: 'center',
               fontSize: '32px',
               marginBottom: '30px',
-              color: '#1f2833'
+              color: '#1f2833',
             }}
           >
             Dollars & Sense
@@ -50,14 +50,15 @@ let Login = props => {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              marginBottom: '10px'
+              marginBottom: '10px',
             }}
           >
             <input
               type="email"
-              onChange={e => {
+              onChange={(e) => {
                 emailRef.current = e.target.value;
               }}
+              autoComplete="off"
               name="email"
               placeholder="Email"
               autoFocus={true}
@@ -67,12 +68,12 @@ let Login = props => {
                 marginBottom: '10px',
                 height: '25px',
                 border: '1px solid gray',
-                paddingLeft: '5px'
+                paddingLeft: '5px',
               }}
             />
             <input
               type="password"
-              onChange={e => {
+              onChange={(e) => {
                 passwordRef.current = e.target.value;
               }}
               name="password"
@@ -82,7 +83,7 @@ let Login = props => {
                 background: '#ffffff',
                 height: '25px',
                 border: '1px solid gray',
-                paddingLeft: '5px'
+                paddingLeft: '5px',
               }}
             />
           </div>
@@ -96,7 +97,7 @@ let Login = props => {
               justifyContent: 'center',
               background: '#45a29e',
               borderRadius: '3px',
-              marginBottom: '10px'
+              marginBottom: '10px',
             }}
             onClick={enterPortal}
           >
@@ -107,7 +108,7 @@ let Login = props => {
               display: 'flex',
               justifyContent: 'center',
               color: 'gray',
-              fontFamily: 'Inter, sans-serif'
+              fontFamily: 'Inter, sans-serif',
             }}
           >
             Forgot my password
