@@ -10,84 +10,84 @@ let Menu = loadable(() => import('menu/index'));
 let Orders = loadable(() => import('orders/index'));
 let Portal = loadable(() => import('portal/index'));
 let Staff = loadable(() => import('staff/index'));
-let Profit = loadable(() => import('financials/profit'));
+let Profit = loadable(() => import('financials/Profit'));
 let Expenses = loadable(() => import('financials/expenses'));
 let Income = loadable(() => import('financials/income'));
 let Quarterly = loadable(() => import('financials/quarterly'));
 let Yearly = loadable(() => import('financials/yearly'));
 
-let App = props => {
+let App = (props) => {
   return (
     <div style={{ margin: '0' }}>
       <Route
         path={'/account/'}
         exact={true}
-        render={rProps => <Account {...rProps} {...props} />}
+        render={(rProps) => <Account {...rProps} {...props} />}
       />
       <Route
         path={'/financials/'}
         exact={true}
-        render={rProps => <Financials {...rProps} {...props} />}
+        render={(rProps) => <Financials {...rProps} {...props} />}
       />
 
       <Route
         path={'/financials/profit'}
         exact={true}
-        render={rProps => <Profit {...rProps} {...props} />}
+        render={(rProps) => <Profit {...rProps} {...props} />}
       />
 
       <Route
         path={'/financials/expenses'}
         exact={true}
-        render={rProps => <Expenses {...rProps} {...props} />}
+        render={(rProps) => <Expenses {...rProps} {...props} />}
       />
 
       <Route
         path={'/financials/income'}
         exact={true}
-        render={rProps => <Income {...rProps} {...props} />}
+        render={(rProps) => <Income {...rProps} {...props} />}
       />
 
       <Route
         path={'/financials/quarterly'}
         exact={true}
-        render={rProps => <Quarterly {...rProps} {...props} />}
+        render={(rProps) => <Quarterly {...rProps} {...props} />}
       />
 
       <Route
         path={'/financials/yearly'}
         exact={true}
-        render={rProps => <Yearly {...rProps} {...props} />}
+        render={(rProps) => <Yearly {...rProps} {...props} />}
       />
       <Route
         path={'/inventory/'}
         exact={true}
-        render={rProps => <Inventory {...rProps} {...props} />}
+        render={(rProps) => <Inventory {...rProps} {...props} />}
       />
       <Route
         path={['/', '/login/']}
         exact={true}
-        render={rProps => <Login {...rProps} {...props} />}
+        render={(rProps) => <Login {...rProps} {...props} />}
       />
       <Route
         path={'/menu/'}
         exact={true}
-        render={rProps => <Menu {...rProps} {...props} />}
+        render={(rProps) => <Menu {...rProps} {...props} />}
       />
       <Route
         path={'/orders/'}
         exact={true}
-        render={rProps => <Orders {...rProps} {...props} />}
+        render={(rProps) => <Orders {...rProps} {...props} />}
       />
       <Route
         path={'/portal/'}
         exact={true}
-        render={rProps => <Portal {...rProps} {...props} />}
+        render={(rProps) => <Portal {...rProps} {...props} />}
       />
       <Route
         path={'/staff/'}
         exact={true}
-        render={rProps => <Staff {...rProps} {...props} />}
+        render={(rProps) => <Staff {...rProps} {...props} />}
       />
     </div>
   );
