@@ -12,9 +12,8 @@ let Financials = (props) => {
       <Link to="/financials/income" style={{ textDecoration: "none", color: '#ffffff', fontSize: '30px', marginBottom: '30px'}}>Income </Link>
       <Link to="/financials/expenses" style={{ textDecoration: "none", color: '#ffffff', fontSize: '30px', marginBottom: '30px'}}>Expenses </Link>
       <Link to="/financials/profit" style={{ textDecoration: "none", color: '#ffffff', fontSize: '30px', marginBottom: '30px'}}>Profit </Link>
-      <Link to="/financials/quarterly" style={{ textDecoration: "none", color: '#ffffff', fontSize: '30px', marginBottom: '30px'}}>Quarterly</Link>
-      <Link to="/financials/yearly" style={{ textDecoration: "none", color: '#ffffff', fontSize: '30px', marginBottom: '30px'}}>Yearly</Link>
       </div>
+      
   )
 }
 

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import CompanyLogo from 'companyLogo';
 
-let weeklyIncome = 11226;
-let monthlyIncome = weeklyIncome * 4;
-let quarterlyIncome = monthlyIncome * 3;
-let yearlyIncome = quarterlyIncome * 4;
+global.weeklyIncome = 11226;
+global.monthlyIncome = global.weeklyIncome * 4;
+global.quarterlyIncome = global.monthlyIncome * 3;
+global.yearlyIncome = global.quarterlyIncome * 4;
 
 let Income = props => {
   let [dailyIncome, setDailyIncome] = useState(0.00);
@@ -46,13 +46,13 @@ let Income = props => {
           </button>
         </form>
         <div style={divStyle}>
-          Weekly income recorded so far is ${weeklyIncome + dailyIncome}
+          Weekly income recorded so far is ${global.weeklyIncome + dailyIncome}
         </div>
-        <div style={divStyle}>Projected monthly income is ${monthlyIncome}</div>
+        <div style={divStyle}>Projected monthly income is ${global.monthlyIncome + (dailyIncome * 30)}</div>
         <div style={divStyle}>
-          Projected quarterly income is ${quarterlyIncome}
+          Projected quarterly income is ${global.quarterlyIncome + (dailyIncome * 120)}
         </div>
-        <div style={divStyle}>Projected yearly income is ${yearlyIncome}</div>
+        <div style={divStyle}>Projected yearly income is ${global.yearlyIncome + (dailyIncome * 365)}</div>
       </div>
     </div>
   );
