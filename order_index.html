@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dollars & Sense </title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="order_style.css">
+
+</head>
+<body>
+
+    
+<!-- header section starts  -->
+
+<header>
+
+    <a href="#" class="logo"><i class="fas fa-utensils"></i>Bob's Burgers</a>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="#order">order</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+
+<!-- order section starts  -->
+
+<section class="order" id="order">
+
+    <h1 class="heading"> <span>order</span> now </h1>
+
+    <div class="row">
+        
+        <div class="image">
+            <img src="images/order1-img.jpg" alt="">
+        </div>
+
+        <form action="">
+
+            <div class="inputBox">
+                <input type="text" placeholder="name">
+                <input type="email" placeholder="email">
+            </div>
+
+            <div class="inputBox">
+                <input type="number" placeholder="phone number">
+                <input type="address" placeholder="address">
+            </div>
+			
+			
+			<h4>Choose From Our New Item Menu:</h4>
+<input name="sizes" type="radio" value="loaded cheese fry burger">Loaded Cheese Fry Burger<br>
+<input name="sizes" type="radio" value="cajun shrimp & chicken pasta">Cajun Shrimp & Chicken Pasta<br>
+<input name="sizes" type="radio" value="poke nachos">Poke Nachos<br>
+<input name="sizes" type="radio" value="boneless wings">Boneless Wings<br>
+<input name="sizes" type="radio" value="big ribs">Big Ribs<br>
+<input name="sizes" type="radio" value="nashville hot chicken sandwich">Nashville Hot Chicken Sandwich<br>
+
+<h4>Choose Our Delicious Menu:</h4>
+<input name="sizes" type="radio" value="blazing pound of cheese fries">Blazing Pound Of Cheese Fries<br>
+<input name="sizes" type="radio" value="fried chicken tenders">Fried Chicken Tenders<br>
+<input name="sizes" type="radio" value="grilled chicken & avocado sandwich">Grilled Chicken & Avocado Sandwich<br>
+<input name="sizes" type="radio" value="house cheesesteak">House Cheesesteak<br>
+<input name="sizes" type="radio" value="catch of the season">Catch Of The Season<br>
+<input name="sizes" type="radio" value="speared & seared">Speared & Seared<br></section>
+
+<h4>Amount:</h4>
+<select id="sel">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select>
+
+<h4>Payment Method</h4>
+<input name="pay" type="radio" value="visa">Visa<br>
+<input name="pay" type="radio" value="invoice">Invoice<br>
+<input name="pay" type="radio" value="mastercard">Mastercard<br>
+</br>
+</br>
+</br>
+<h4>Order confirmation</h4>
+<div id="1b1Values"></div>
+</form>
+			
+
+            <input type="submit" value="order now" class="btn">
+
+        </form>
+
+    </div>
+
+<script>
+function send ()
+{
+if validate() ==false)
+{ 
+return;
+}
+if (validateRadio() ==false)
+{
+alert("You have to select a menu item");
+return;
+}
+if(validatePaymentMethod()==false)
+{
+alert("You have to choose a payment method");
+return;
+}
+
+alert("Your food order has been sent for processing.");
+checkForm();
+return;
+}
+function validate Radio()
+{
+if (document,OrderForm.menuitems[0],checked)
+{
+return true;
+}
+if (document,OrderForm.menuitems[1],checked)
+{
+return true;
+}
+if (document,OrderForm.menuitems[2],checked)
+{
+return true;
+}
+if (document,OrderForm.menuitems[3],checked)
+{
+return true;
+}
+if (document,OrderForm.menuitems[4],checked)
+{
+return true;
+}
+return false;
+}
+
+function validatePaymentMethod()
+{
+if (document.OrderForm.pay[0], checked)
+{
+return true;
+}
+if (document.OrderForm.pay[1], checked)
+{
+return true;
+}
+if (document.OrderForm.pay[2], checked)
+{
+return true;
+}
+return false;
+}
+
+function checkForm()
+var el = document.OrderForm.elements.length
+var txt ="";
+for (i=0; i<el; i++)
+{
+var type = OrderForm.elements[i].type;
+if(type=="radio"&& OrderForm.elements[i].checked)
+{
+txt = txt + OrderForm.elements[i].value+"<br>";
+}
+if (type=="text" && OrderForm.elements[i].value)
+{
+txt=txt+ OrderForm.elements[i].value)+"<br>";
+}
+if (type=="select-one")
+{
+var e = document.getElementById("sel");
+var strUser= e.options[e.selectedIndex].text;
+txt=txt+"Amount:" + e.options[e.selectedIndex].text+"<br>";
+}
+}
+document.getElementById("1b1Values").innerHTML =txt;
+}
+</script>
+<body>
+
+<!-- order section ends -->
+
+<!-- scroll top button  -->
+<a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+
+<!-- loader  -->
+<div class="loader-container">
+    <img src="images/loader2.gif" alt="">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="order_script.js"></script>
+
+
+</body>
+</html>
